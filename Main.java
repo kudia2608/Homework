@@ -9,8 +9,8 @@ public class Main {
         compareNumbers();
         boolean result = sumTwo(8, 6);
         System.out.println("Результат для (8, 6): " + result);
-        Number(-3);
-        boolean result2 = NegativeNumber(-10);
+        number(-3);
+        boolean result2 = negativeNumber(-10);
         System.out.println("Результат для -10: " + result2);
         printer("Friday", 3);
         boolean result1 = years(2024);
@@ -19,10 +19,10 @@ public class Main {
         System.out.println("2023 год невисокосный -" + result3);
         int[] array = {0, 1, 0, 1};
         modifyArrays(array);
-        moreThan(args);
-        multiply(args);
+        moreThan();
+        multiply();
         print();
-        writen(args);
+        writen();
     }
 
     //    задание 1
@@ -49,7 +49,7 @@ public class Main {
         int value = 100;
         if (value <= 0) {
             System.out.println("Красный");
-        } else if (value > 0 && value <= 100) {
+        } else if (value <= 100) {
             System.out.println("Желтый");
         } else {
             System.out.println("Зеленый");
@@ -70,14 +70,11 @@ public class Main {
     //    задание 5
     public static boolean sumTwo(int a, int b) {
         int sum = a + b;
-        if (sum >= 10 && sum <= 20) {
-            return true;
-        } else
-            return false;
+        return sum >= 10 && sum <= 20;
     }
 
     //     задание 6
-    public static void Number(int number) {
+    public static void number(int number) {
         if (number >= 0)
             System.out.println("Число положительное");
         else
@@ -85,11 +82,8 @@ public class Main {
     }
 
     //    задание 7
-    public static boolean NegativeNumber(int number) {
-        if (number < 0)
-            return true;
-        else
-            return false;
+    public static boolean negativeNumber(int number) {
+        return (number < 0);
     }
 
     //    задание 8
@@ -100,10 +94,7 @@ public class Main {
 
     //   задание 9
     public static boolean years(int year) {
-        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
-            return true;
-        else
-            return false;
+        return ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0));
     }
 
     //   задание 10
@@ -115,7 +106,7 @@ public class Main {
     }
 
     //    задание 11
-    public static void moreThan(String[] args) {
+    public static void moreThan() {
         int[] array = new int[100];
         for (int i = 0; i < array.length; i++) {
             array[i] = i + 1;
@@ -125,7 +116,7 @@ public class Main {
     }
 
     //    задание 12
-    public static void multiply(String[] args) {
+    public static void multiply() {
         int[] array = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
         for (int i = 0; i < array.length; i++) {
             if (array[i] < 6) {
@@ -135,16 +126,12 @@ public class Main {
         System.out.println("Измененный массив: " + Arrays.toString(array));
     }
 
-    //    задание 13
+    // Задание 13
     public static void print() {
         int size = 5;
         int[][] array = new int[size][size];
         for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
-                if (i == j) {
-                    array[i][j] = 1;
-                }
-            }
+            array[i][i] = 1;
         }
 
         for (int[] row : array) {
@@ -159,7 +146,7 @@ public class Main {
         return array;
     }
 
-    public static void writen(String[] args) {
+    public static void writen() {
         int[] resultArray = intel(5, 10);
         System.out.print("Инициализированный массив: ");
         for (int i = 0; i < resultArray.length; i++) {
