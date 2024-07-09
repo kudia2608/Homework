@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite">
+    <test name="Test">
+        <classes>
+            <class name="CheckFormTest"/>
+            <class name="CheckBlockTitleTest"/>
+            <class name="CheckMoreAboutServiceLinkTest"/>
+            <class name="CheckPaymentSystemLogoTest"/>
+
+        </classes>
+    </test>
+</suite>
