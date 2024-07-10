@@ -1,0 +1,15 @@
+<suite name="All Tests" parallel="false">
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+    <test name="TestSuite">
+        <classes>
+            <class name="CheckCommunicationServicesTest"/>
+            <class name="CheckDebtTest"/>
+            <class name="CheckHomeInternetTest"/>
+            <class name="CheckInstallmentTest"/>
+            <class name="CheckPaymentPageTest"/>
+        </classes>
+    </test>
+    <parameter name="allure.results.directory" value="target/allure-results"/>
+</suite>
